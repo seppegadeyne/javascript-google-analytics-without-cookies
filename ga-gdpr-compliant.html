@@ -1,3 +1,4 @@
+<!-- Google Analytics anonymous and without cookies -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/2.1.0/fingerprint2.min.js"></script>
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -9,7 +10,8 @@
         Fingerprint2.get(function (components) {
             let values = components.map(function (component) { return component.value });
             let murmur = Fingerprint2.x64hash128(values.join(''), 31);
-            ga('create', 'UA-151305209-1', {
+            // Replace XX-XXXXXXXXX-X with your unique GA tracking code
+            ga('create', 'XX-XXXXXXXXX-X', {
                 'storage':'none',
                 'clientId':murmur
             });
